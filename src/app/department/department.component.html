@@ -1,2 +1,3 @@
-<pm-department-view [department]="departmentList | async" (addDepartmentEvent)="addDepartmentEvent($event)"></pm-department-view>
+<pm-department-view [department]="departmentList$ | async" (addDepartmentEvent)="setAction($event)"></pm-department-view>
 
+<ng-container *ngIf="addDepartmentModal$ | async"></ng-container>

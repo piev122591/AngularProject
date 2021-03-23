@@ -1,4 +1,4 @@
-
+<!-- 
   <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>
     <button type="button" class="close" aria-label="Close" >
@@ -12,4 +12,14 @@
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-light" (click)="onSubmit()">Save</button>
-  </div>
+  </div> -->
+
+  <h1 mat-dialog-title>Hi</h1>
+<div mat-dialog-content> 
+  <form [formGroup]="departmentForm">
+    <input type="text" formControlName="departmentName" >
+  </form>
+</div>
+<div mat-dialog-actions> 
+  <button mat-button  (click)="onSubmit()">Ok</button>
+</div>
