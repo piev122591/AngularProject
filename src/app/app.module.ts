@@ -11,25 +11,27 @@ import { VendorsModule } from './vendors/vendors.module';
 import { DevicesModule } from './devices/devices.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    WelcomeComponent,
-  ],
+  declarations: [AppComponent, WelcomeComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot([
       { path: 'welcome', component: WelcomeComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+      { path: '**', redirectTo: 'welcome', pathMatch: 'full' },
     ]),
     ProductModule,
     DepartmentModule,
     VendorsModule,
-    DevicesModule,NgbModule,
+    DevicesModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

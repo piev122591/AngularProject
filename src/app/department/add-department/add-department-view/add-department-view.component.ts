@@ -10,6 +10,7 @@ import { DepartmentEvent } from '../../department';
 export class AddDepartmentViewComponent  {
 
   @Output() departmentEvent = new EventEmitter<DepartmentEvent>();
+  
   departmentForm = new FormGroup({
     departmentName: new FormControl(''),
   });

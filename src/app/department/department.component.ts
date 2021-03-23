@@ -1,49 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { DepartmentEvent, IDepartment } from './department';
-import { DepartmentService } from './department.service';
+import { DepartmentEvent, IDepartment, IDepartmentResult } from './department';
+import { DepartmentService } from './services/department.service';
+import { AddDepartmentModalService } from './services/add-department-modal.service';
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 @Component({
   selector: 'pm-department',
   templateUrl: './department.component.html',
-  styleUrls: ['./department.component.css']
+  styleUrls: ['./department.component.css'],
+  providers: [DepartmentService, AddDepartmentModalService],
 })
 export class DepartmentComponent implements OnInit {
-  pageTitle = 'Department List';
-  errorMessage = '';
-
-
-  _listFilter = '';
-  get listFilter(): string {
-    return this._listFilter;
-  }
-  set listFilter(value: string) {
-    this._listFilter = value;
-    this.filteredDepartment = this.listFilter ? this.performFilter(this.listFilter) : this.department;
-  }
-
-
-  filteredDepartment: IDepartment[] = [];
-  department: IDepartment[] = [];
-
-  performFilter(filterBy: string): IDepartment[] {
-    filterBy = filterBy.toLocaleLowerCase();
-    return this.department.filter((product: IDepartment) =>
-      product.departmentName.toLocaleLowerCase().indexOf(filterBy) !== -1);
-  }
-
-  departmentList = this.departmentService.getDepartment();
-  event$ = this.departmentService.departmentEvent$;
-  constructor(private departmentService: DepartmentService) { }
-  addDepartmentEvent(event:DepartmentEvent):void{
-    this.departmentService.updateEventSubject(event);
-  } 
+  addDepartmentModal$ = this.addDepartmentModalService.addDepartmentModal$.pipe(
+    map((department): string => {
+      return this.departmentService.setAddDepartmentResult(department);
+    })
+  );
+  departmentList$: Observable<IDepartment[]>;
+  constructor(
+    private departmentService: DepartmentService,
+    private addDepartmentModalService: AddDepartmentModalService
+  ) {}
   ngOnInit(): void {
-    // this.departmentService.getDepartment().subscribe({
-    //   next: department => {
-    //     this.department = department;
-    //     this.filteredDepartment = this.department;
-    //   },
-    //   error: err => this.errorMessage = err
-    // });
+    this.departmentList$ = this.departmentService.getDepartmentData();
   }
 
+  setAction(event: DepartmentEvent): void {
+    this.departmentService.setAction(event);
+  }
 }

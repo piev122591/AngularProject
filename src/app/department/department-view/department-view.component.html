@@ -39,10 +39,11 @@
      class='alert alert-danger'>
   Error: {{ errorMessage }}
 </div> -->
-<button class="btn btn-outline-primary mb-2 mr-2" (click)="addDepartment()">Add Department</button>
-<div class='table-responsive'>
-  <table class='table'
-         *ngIf='department && department.length'>
+<button class="btn btn-outline-primary mb-2 mr-2" (click)="addDepartment()">
+  Add Department
+</button>
+<div class="table-responsive">
+  <table class="table" *ngIf="department && department.length">
     <thead>
       <tr>
         <th>DepartmentId</th>
@@ -50,9 +51,9 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor='let dp of department'>
+      <tr *ngFor="let dp of department">
         <td>{{ dp.departmentId }}</td>
-        <td>{{ dp.departmentName}}</td>
+        <td>{{ dp.departmentName }}</td>
       </tr>
     </tbody>
   </table>
