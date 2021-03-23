@@ -1,0 +1,43 @@
+[
+  {
+    "VendorId": 1,
+    "CarrierName": "Vendor1",
+    "VendorStatusName": "Active",
+    "IsWireLess": false,
+    "IsWireLine": true,
+    "UsesElectronicData": true
+  },
+  {
+    "VendorId": 2,
+    "CarrierName": "Vendor2",
+    "VendorStatusName": "Active",
+    "IsWireLess": false,
+    "IsWireLine": true,
+    "UsesElectronicData": true
+  },
+  {
+    "VendorId": 3,
+    "CarrierName": "Vendor3",
+    "VendorStatusName": "Active",
+    "IsWireLess": false,
+    "IsWireLine": true,
+    "UsesElectronicData": true
+  },
+  {
+    "VendorId": 4,
+    "CarrierName": "Vendor4",
+    "VendorStatusName": "Active",
+    "IsWireLess": false,
+    "IsWireLine": true,
+    "UsesElectronicData": true
+  },
+  {
+    "VendorId": 5,
+    "CarrierName": "Vendor5",
+    "VendorStatusName": "InActive",
+    "IsWireLess": false,
+    "IsWireLine": true,
+    "UsesElectronicData": true
+  }
+]
+

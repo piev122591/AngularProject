@@ -1,0 +1,59 @@
+<!-- <div class='card'>
+  <div class='card-header'>
+    {{pageTitle}}
+  </div>
+  <div class='card-body'>
+    <div class='row'>
+      <div class='col-md-2'>Filter by:</div>
+      <div class='col-md-4'>
+        <input type='text'
+               [(ngModel)]='listFilter' />
+      </div>
+    </div>
+    <div class='row'
+         *ngIf='listFilter'>
+      <div class='col-md-6'>
+        <h4>Filtered by: {{listFilter}}</h4>
+      </div>
+    </div>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='department && department.length'>
+        <thead>
+          <tr>
+            <th>DepartmentId</th>
+            <th>Department Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let department of filteredDepartment'>
+            <td>{{ department.DepartmentId }}</td>
+            <td>{{ department.DepartmentName}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+  Error: {{ errorMessage }}
+</div> -->
+<button class="btn btn-outline-primary mb-2 mr-2" (click)="addDepartment()">Add Department</button>
+<div class='table-responsive'>
+  <table class='table'
+         *ngIf='department && department.length'>
+    <thead>
+      <tr>
+        <th>DepartmentId</th>
+        <th>Department Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let dp of department'>
+        <td>{{ dp.departmentId }}</td>
+        <td>{{ dp.departmentName}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

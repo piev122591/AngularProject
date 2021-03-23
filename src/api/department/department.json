@@ -1,0 +1,23 @@
+[
+  {
+    "DepartmentId": 1,
+    "DepartmentName": "Accounting"
+
+  },
+  {
+    "DepartmentId": 1,
+    "DepartmentName": "Sales"
+  },
+  {
+    "DepartmentId": 1,
+    "DepartmentName": "IT"
+  },
+  {
+    "DepartmentId": 1,
+    "DepartmentName": "Audit"
+  },
+  {
+    "DepartmentId": 1,
+    "DepartmentName": "Finance"
+  }
+]

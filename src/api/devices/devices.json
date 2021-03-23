@@ -1,0 +1,47 @@
+[
+  {
+    "BaseDeviceId": 1,
+    "VendorId": "Vendor1",
+    "DeviceMake": "Apple",
+    "DeviceModel": "Iphone 12",
+    "DevicePath": "FilePath",
+    "DeviceImage": "Image",
+    "AssetTypeId": true,
+    "BaseDeviceStatusId": true
+
+  },
+  {
+    "BaseDeviceId": 2,
+    "VendorId": "Vendor2",
+    "DeviceMake": "Samsung",
+    "DeviceModel": "Samsung Note",
+    "DevicePath": "FilePath",
+    "DeviceImage":"Image",
+    "AssetTypeId": true,
+    "BaseDeviceStatusId": true
+  },
+  {
+    "BaseDeviceId": 1,
+    "VendorId": "Vendor1",
+    "DeviceMake": "Apple",
+    "DeviceModel": "Iphone 7",
+    "DevicePath": "FilePath",
+    "DeviceImage": "Image",
+    "AssetTypeId": true,
+    "BaseDeviceStatusId": true
+
+  },
+  {
+    "BaseDeviceId": 1,
+    "VendorId": "Vendor1",
+    "DeviceMake": "Samsung",
+    "DeviceModel": "TV",
+    "DevicePath": "FilePath",
+    "DeviceImage": "Image",
+    "AssetTypeId": true,
+    "BaseDeviceStatusId": true
+
+  }
+
+]
+
